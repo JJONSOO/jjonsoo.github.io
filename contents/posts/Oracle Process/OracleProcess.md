@@ -1,11 +1,11 @@
 ---
-title: "DB Oracle"
+title: "Oracle Process"
 description:
-date: 2021-05-04
-update: 2021-05-04
+date: 2024-07-14
+update: 2021-07-14
 tags:
-  - hoodie
-  - other-tips
+  - Database
+  - Oracle
 ---
 
 ## DB Process & Thread
