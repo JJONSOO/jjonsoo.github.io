@@ -16,11 +16,6 @@ tags:
 - 오라클 프로세스는 오라클 데이터베이스 코드를 실행하는 실행 단위입니다.
 [Process Architecture (oracle.com)](https://docs.oracle.com/en/database/oracle/oracle-database/21/cncpt/process-architecture.html#GUID-251AC080-BD5C-415E-8549-B67F8653AD40)
 
-## Oracle Process
-
-- Process는 OS에 따라 달라진다
-- 오라클 프로세스는 오라클 데이터베이스 코드를 실행하는 실행 단위입니다.
-
 #### Multiprocess and MultiThread
 
 데이터베이스와 애플리케이션의 작업을 여러 프로세스로 나누면 여러 사용자와 애플리케이션이 동시에 인스턴스에 연결할 수 있으며 시스템 성능도 향상됩니다.
