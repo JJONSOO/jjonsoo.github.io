@@ -33,20 +33,20 @@ Oracle Process ≠ OS Process
 
 ![OracleStructure](OracleStructure.png)
 
-#### Client Process
+### Client Process
 
 - ProC Program, SQL Plus 실행 시, OS는 Client Process를 생성한다.
 데이터베이스와 통신하는 데 필요한 API를 제공하는 Oracle 데이터베이스 라이브러리가 연결되어 있습니다.
 - 다른 프로세스들은 SGA를 직접 read, write 할 수 있지만, Client Process는 하지 못한다.
 클라이언트 프로세스는 데이터베이스 호스트가 아닌 다른 호스트에서 실행할 수 있지만 Oracle 프로세스는 그렇지 않습니다.
 
-#### Connections and Sessions
+### Connections and Sessions
 
 - Connection은 Client Process와 데이터베이스 인스턴스 간의 물리적 통신 경로
 - 연결 중에는, IPC 또는 Network Software를 사용할 수 있다.
 - Session은 사용자가 데이터베이스에 의해 인증된 시점부터 사용자가 데이터베이스 애플리케이션 연결을 끊거나 종료할 때까지 지속됩니다.
 
-#### Server Process
+### Server Process
 
 - 인스턴스에 연결된 클라이언트 프로세스의 요청을 처리하기 위해 서버 프로세스를 생성
 - Client Process는 Server Process를 통해 데이터베이스와 통신한다.
@@ -61,13 +61,13 @@ Oracle Process ≠ OS Process
 - 여러 Client Process가 하나의 Dispatcher Process에 연결할 수 있다.
 - 연결된 Client의 요청을 수신하여 Pool의 대기열에 넣는다. 사용 가능한 Shared Server가 큐에서 요청을 가져와 처리한다. 그 후 응답 대기열에 결과를 넣는다. Shared Server Process는 큐를 모니터링하고 결과를 클라이언트에게 전송
 
-#### Background Process
+### Background Process
 
 - 백그라운드 프로세스는 데이터베이스 운영 및 여러 사용자의 성능을 극대화하는 데 필요한 유지 관리 작업을 수행합니다.
 - 각 백그라운드 프로세스에는 별도의 작업이 있지만 다른 프로세스와 함께 작동합니다.
 - 인스턴스 실행 시, 백그라운드 프로세스를 생성한다.
 
-#### 필수 Background Process
+### 필수 Background Process
 
 #### **PMON**
 
