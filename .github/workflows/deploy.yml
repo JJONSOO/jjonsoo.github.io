@@ -1,0 +1,29 @@
+name: Gatsby Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: git config --global url.https://${{secrets.API_KEY}}@github.com/.insteadOf https://github.com/
+
+      - uses: actions/cache@v3
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/node_modules') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 20.3.1
+
+      - name: npm install
+        run: npm install --legacy-peer-deps
+
+      - name: deploy
+        run: npm run deploy-gh
