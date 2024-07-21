@@ -140,7 +140,7 @@ java -Djava.library.path=. HelloJNI
 
 [How to bundle a native library and a JNI library inside a JAR?](https://stackoverflow.com/questions/2937406/how-to-bundle-a-native-library-and-a-jni-library-inside-a-jar?rq=1)
 
-```bash
+```java
 String libName = "libhello.so "; // The name of the file in resources/ dir
 URL url = MyClass.class.getResource("/" + libName);
 File tmpDir = Files.createTempDirectory("my-native-lib").toFile();
