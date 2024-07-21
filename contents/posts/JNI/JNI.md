@@ -1,3 +1,12 @@
+---
+title: "JNI 사용하기"
+description:
+date: 2024-07-21
+update: 2021-07-12
+tags:
+  - Java
+  - JNI
+---
 JNI(Java Native Interface)는 자바와 Native Code(C,C++)를 연결하는 데 사용되는 프레임워크이다.
 JNI를 통해 자바 Application에서 Natice Library를 호출하거나, Native Application에서 Java Method를 호출 할 수 있다.
 
