@@ -1,3 +1,11 @@
+---
+title: "blkid를 활용하여 Mount시 Volume 고정하기"
+description:
+date: 2024-07-28
+update: 2021-07-28
+tags:
+  - Linux
+---
 AWS에서 인스턴스에 EBS를 여러 개 연결하면 Mount 시 EBS의 파일 크기가 작은 순으로 할당되는 것을 막기 위해, blkid 명령어로 EBS의 UUID를 얻어 Mount 시 EBS 연결을 UUID를 통해 할당되게 만들 수 있습니다.
 
 /etc/fstab 파일에 마운트할 디스크나 블록 디바이스의 파일 시스템 명( /dev/sda1 등)을 적는 것보다 UUID를 적는 것이 더 유리합니다.
