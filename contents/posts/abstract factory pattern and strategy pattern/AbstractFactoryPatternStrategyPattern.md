@@ -4,7 +4,7 @@ description:
 date: 2024-08-04
 update: 2021-08-04
 tags:
-  - Linux
+  - Design Pattern
 ---
 데이터베이스 모니터링 아키텍처를 설계 중 여러 데이터베이스의 Collector, Loader를 사용하기 위해 추상 팩토리 패턴, 전략패턴을 활용하여
 아키텍처를 설계해보았습니다.
