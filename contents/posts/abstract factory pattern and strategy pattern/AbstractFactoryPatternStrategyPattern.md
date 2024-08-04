@@ -66,7 +66,6 @@ public abstract class MonitoringStrategy {
   public MonitoringStrategy(MonitoringFactory monitoringFactory) {
     this.monitoringFactory = monitoringFactory;
   }
-
 }
 
 public class OracleMonitoringStrategy extends MonitoringStrategy {
@@ -100,7 +99,7 @@ public class DatabaseVendorMonitoringStrategy {
 
   private getMonitoringStrategyBy(DatabaseVendor databaseVendor) {
     if(!databaseVendorMonitoringStrategy.containsKey(databaseVendor)) {
-      throw new RuntimeException("Database Vendor is not supported" + databaseVendor);
+      throw new RuntimeException(databaseVendor + "is not supported");
     }
     return databaseVendorMonitoringStrategy.get(databaseVendor);
   }
