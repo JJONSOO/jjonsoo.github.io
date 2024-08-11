@@ -20,8 +20,8 @@ Connection 관리를 직접해줘야 되는 단점이 존재한다.
 - maxTotal (1.x에서는 maxActive): 동시에 사용할 수 있는 최대 커넥션 개수 (default = 8)
 - maxIdle : Connection Pool에 반납할 때 최대로 유지될 수 있는 커넥션 개수 (default = 8)
 - minIdle : 최소한으로 유지할 커넥션 개수 (default = 0)
-- maxWaitMillis (1.x에서는 maxWait) : pool이 고갈되었을 경우 최대 대기 시간 (ms단위, default = -1 = 무한정)이걸 설정하지 않았는데, pool이 고갈되었고, 엔드유저의 요청은 계속 들어온다면?
-tomcat 스레드 풀이 고갈되어 죽는다. 엔드유저 요청마다 무한정 대기중일 테니...
+- maxWaitMillis (1.x에서는 maxWait) : pool이 고갈되었을 경우 최대 대기 시간 (ms단위, default = -1 = 무한정)이걸 설정하지 않았는데, pool이 고갈되었고, 엔드유저의 요청은 계속 들어온다면?<br>
+tomcat 스레드 풀이 고갈되어 죽는다. 엔드유저 요청마다 무한정 대기중일 테니...<br>
 대부분 Connection의 개수 및 대기 상태일 때 설정값이 대부분이다. <br>
 Connection Pool 구조에 대해 더 알아보자
 
