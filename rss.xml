@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Joonsoo]]></title><description><![CDATA[Hello :) I'm Joonsoo Park]]></description><link>https://jjonsoo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 11 Aug 2024 07:57:45 GMT</lastBuildDate><item><title><![CDATA[Connection Pool]]></title><description><![CDATA[웹 애플리케이션에서 데이터베이스와 연결을 맺을 때마다 Conenction을 생성한다면 많은 비용이 들뿐만 아니라, 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[RSS Feed of Joonsoo]]></title><description><![CDATA[Hello :) I'm Joonsoo Park]]></description><link>https://jjonsoo.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 11 Aug 2024 08:00:37 GMT</lastBuildDate><item><title><![CDATA[Connection Pool]]></title><description><![CDATA[웹 애플리케이션에서 데이터베이스와 연결을 맺을 때마다 Conenction을 생성한다면 많은 비용이 들뿐만 아니라, 
 Connection 관리를 직접해줘야 되는 단점이 존재한다. 이를 해결하기 위해 Connection Pool…]]></description><link>https://jjonsoo.github.io/ConnectionPool/</link><guid isPermaLink="false">https://jjonsoo.github.io/ConnectionPool/</guid><pubDate>Sun, 11 Aug 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;웹 애플리케이션에서 데이터베이스와 연결을 맺을 때마다 Conenction을 생성한다면 많은 비용이 들뿐만 아니라,
 Connection 관리를 직접해줘야 되는 단점이 존재한다.&lt;/p&gt;
 &lt;p&gt;이를 해결하기 위해 Connection Pool을 사용하는데, 여러 오픈 소스 라이브러리가 존재한다.(Apache Commons DBCP, Tomcat-JDBC, HikariCP) &lt;/p&gt;
@@ -10,8 +10,8 @@ Connection 관리를 직접해줘야 되는 단점이 존재한다.&lt;/p&gt;
 &lt;li&gt;maxTotal (1.x에서는 maxActive): 동시에 사용할 수 있는 최대 커넥션 개수 (default = 8)&lt;/li&gt;
 &lt;li&gt;maxIdle : Connection Pool에 반납할 때 최대로 유지될 수 있는 커넥션 개수 (default = 8)&lt;/li&gt;
 &lt;li&gt;minIdle : 최소한으로 유지할 커넥션 개수 (default = 0)&lt;/li&gt;
-&lt;li&gt;maxWaitMillis (1.x에서는 maxWait) : pool이 고갈되었을 경우 최대 대기 시간 (ms단위, default = -1 = 무한정)이걸 설정하지 않았는데, pool이 고갈되었고, 엔드유저의 요청은 계속 들어온다면?
-tomcat 스레드 풀이 고갈되어 죽는다. 엔드유저 요청마다 무한정 대기중일 테니...
+&lt;li&gt;maxWaitMillis (1.x에서는 maxWait) : pool이 고갈되었을 경우 최대 대기 시간 (ms단위, default = -1 = 무한정)이걸 설정하지 않았는데, pool이 고갈되었고, 엔드유저의 요청은 계속 들어온다면?&lt;br&gt;
+tomcat 스레드 풀이 고갈되어 죽는다. 엔드유저 요청마다 무한정 대기중일 테니...&lt;br&gt;
 대부분 Connection의 개수 및 대기 상태일 때 설정값이 대부분이다. &lt;br&gt;
 Connection Pool 구조에 대해 더 알아보자&lt;/li&gt;
 &lt;/ul&gt;
