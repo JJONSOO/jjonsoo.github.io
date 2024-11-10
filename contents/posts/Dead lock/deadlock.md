@@ -15,7 +15,7 @@ tags:
 상품 및 사은품 Insert 쿼리는 다음과 같은 흐름으로 이루어집니다.
 
 아래 흐름은 하나의 트랜잭션에서 동작합니다.
-1) 상품 sequence의 LAST_NUMBER로 return_id를 지정
+1) 상품 sequence의 LAST NUMBER로 return_id를 지정
 2) 상품 insert. PK는 sequence의 NEXT_VAL로 지정한다.
 3) 1)에서 return_id를 가져와 사은품의 PK로 지정하여 insert.
 <br>
