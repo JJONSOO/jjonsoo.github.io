@@ -2,11 +2,12 @@
 title: "Deadlock in Oracle with Insert query"
 description:
 date: 2024-11-10
-update: 2021-11-10
+update: 2024-11-10
 tags:
   - Oracle
   - Deadlock
 ---
+
 이번글은 Oracle Insert 시 발생하는 데드락 문제 분석과 해결 방안에 대해 작성해보았습니다.
 
 # 데드락이 발생한 상황 가정
